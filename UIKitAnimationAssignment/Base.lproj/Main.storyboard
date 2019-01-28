@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3XZ-nN-krS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="3bK-FC-DIA">
+            <objects>
+                <viewController id="3XZ-nN-krS" customClass="ViewController" customModule="UIKitAnimationAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHO-9D-NE6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="i4g-tC-AmE">
+                                <rect key="frame" x="137.5" y="143.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2Px-SR-dru"/>
+                                    <constraint firstAttribute="width" constant="100" id="Iej-8l-mHW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-le-fd3">
+                                <rect key="frame" x="16" y="566" width="133" height="101"/>
+                                <state key="normal" title="Button" image="dog"/>
+                                <connections>
+                                    <action selector="imageTransition:" destination="3XZ-nN-krS" eventType="touchUpInside" id="Q05-jH-Jz7"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-4p-bBs">
+                                <rect key="frame" x="18" y="298" width="339" height="261"/>
+                                <connections>
+                                    <action selector="toggledDuck:" destination="3XZ-nN-krS" eventType="valueChanged" id="WbL-f3-a5L"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zlm-le-fd3" firstAttribute="leading" secondItem="5G8-5e-ujd" secondAttribute="leading" constant="16" id="4O8-TO-E5p"/>
+                            <constraint firstItem="DWc-4p-bBs" firstAttribute="top" secondItem="i4g-tC-AmE" secondAttribute="bottom" constant="54.5" id="Dpf-tv-uN3"/>
+                            <constraint firstItem="i4g-tC-AmE" firstAttribute="leading" secondItem="5G8-5e-ujd" secondAttribute="leading" constant="137.5" id="Iz4-S5-raz"/>
+                            <constraint firstItem="i4g-tC-AmE" firstAttribute="top" secondItem="5G8-5e-ujd" secondAttribute="top" constant="123.5" id="KfK-Xb-jWe"/>
+                            <constraint firstItem="5G8-5e-ujd" firstAttribute="trailing" secondItem="i4g-tC-AmE" secondAttribute="trailing" constant="137.5" id="Py3-O8-CLB"/>
+                            <constraint firstItem="5G8-5e-ujd" firstAttribute="trailing" secondItem="zlm-le-fd3" secondAttribute="trailing" constant="226" id="bR7-gr-N8o"/>
+                            <constraint firstItem="zlm-le-fd3" firstAttribute="bottom" secondItem="5G8-5e-ujd" secondAttribute="bottom" id="fT2-t0-Owq"/>
+                            <constraint firstItem="zlm-le-fd3" firstAttribute="top" secondItem="i4g-tC-AmE" secondAttribute="bottom" constant="322.5" id="fyg-Sh-4cl"/>
+                            <constraint firstItem="5G8-5e-ujd" firstAttribute="trailing" secondItem="DWc-4p-bBs" secondAttribute="trailing" constant="20" id="maF-o9-phf"/>
+                            <constraint firstItem="5G8-5e-ujd" firstAttribute="bottom" secondItem="DWc-4p-bBs" secondAttribute="bottom" constant="109" id="ooQ-ZW-uAc"/>
+                            <constraint firstItem="DWc-4p-bBs" firstAttribute="leading" secondItem="5G8-5e-ujd" secondAttribute="leading" constant="20" id="qcc-9g-F7t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5G8-5e-ujd"/>
+                    </view>
+                    <connections>
+                        <outlet property="dog" destination="zlm-le-fd3" id="oCf-hN-wKf"/>
+                        <outlet property="duck" destination="i4g-tC-AmE" id="Cdt-7b-V9K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4Q-SQ-h6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.400000000000006" y="-242.42878560719643"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog" width="118.08000183105469" height="157.67999267578125"/>
+        <image name="duck" width="512" height="512"/>
+    </resources>
+</document>
